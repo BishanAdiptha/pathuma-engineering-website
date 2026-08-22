@@ -261,7 +261,7 @@ export default function App() {
                 <div className="cast-after-line"></div>
               </div>
               <p className="cast-subtitle-text font-mono">
-                ALL KINDS OF IRON WORKS • ISLANDWIDE INSTALLATION
+                ALL KINDS OF IRON WORK ISLANDWIDE INSTALLATION
               </p>
             </div>
 
