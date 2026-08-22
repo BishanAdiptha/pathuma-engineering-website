@@ -476,7 +476,7 @@ export default function App() {
 
             <div className="about-stats-grid">
               <div className="stat-item">
-                <h3>15+</h3>
+                <h3>20+</h3>
                 <p>Years Experience</p>
               </div>
               <div className="stat-item">
