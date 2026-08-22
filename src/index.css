@@ -1064,15 +1064,14 @@ button {
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  .hero-main-grid,
+  .hero-main-grid {
+    grid-template-columns: 1fr;
+  }
   .about-grid,
   .founder-row {
     grid-template-columns: 1fr;
   }
   .social-preview-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .collection-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .founder-photo-block {
@@ -1096,40 +1095,9 @@ button {
     justify-content: center;
     gap: 1.5rem;
   }
-  .hero-top-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
-  }
-  .hero-center-image-frame {
-    width: 100%;
-    max-width: 400px;
-    aspect-ratio: 16/9;
-  }
-  .hero-right-preview-box {
-    width: 100%;
-    justify-content: center;
-  }
-  .cast-main-row {
-    justify-content: center;
-  }
-  .hero-middle-row {
-    justify-content: center;
-  }
-  .hero-title-line {
-    display: none;
-  }
   .hero-bottom-text-row {
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    text-align: center;
-  }
-  .collection-grid {
-    grid-template-columns: 1fr;
-  }
-  .social-buttons-container {
-    grid-template-columns: 1fr;
   }
   .social-section, .about-section, .footer-section {
     padding: 2rem 1rem;
