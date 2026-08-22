@@ -72,8 +72,7 @@ const COLLECTION_ITEMS = [
     code: 'LIGHT & SHADE',
     category: 'grill gates',
     displayCategory: 'Lighting',
-    badgeLeft: 'NEW',
-    badgeRight: '2024',
+    badgeLeft: '01.',
     image: '/pathuma-engineering-website/assets/slide1.png',
     specs: {
       Material: 'Wrought Iron & Steel',
@@ -545,7 +544,7 @@ export default function App() {
               rel="noopener noreferrer"
               className="map-pin-btn"
             >
-              <ExternalLink size={12} /> OPEN IN GOOGLE MAPS
+              <ExternalLink size={15} /> OPEN IN GOOGLE MAPS
             </a>
           </div>
 
