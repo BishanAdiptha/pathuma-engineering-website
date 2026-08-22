@@ -1064,30 +1064,87 @@ button {
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  .hero-main-grid {
-    grid-template-columns: 1fr;
-  }
-  .about-grid {
+  .hero-main-grid,
+  .about-grid,
+  .founder-row {
     grid-template-columns: 1fr;
   }
   .social-preview-strip {
     grid-template-columns: repeat(2, 1fr);
   }
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .founder-photo-block {
+    align-items: center;
+  }
 }
 
 @media (max-width: 850px) {
+  .header-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .header-logo {
+    order: -1;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .header-left, .header-right {
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .hero-top-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .hero-center-image-frame {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 16/9;
+  }
+  .hero-right-preview-box {
+    width: 100%;
+    justify-content: center;
+  }
+  .cast-main-row {
+    justify-content: center;
+  }
+  .hero-middle-row {
+    justify-content: center;
+  }
+  .hero-title-line {
+    display: none;
+  }
   .hero-bottom-text-row {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+    text-align: center;
+  }
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+  .social-buttons-container {
+    grid-template-columns: 1fr;
   }
   .social-section, .about-section, .footer-section {
     padding: 2rem 1rem;
   }
-  .footer-top-grid {
-    grid-template-columns: 1fr;
+  .footer-main-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
   }
-  .footer-huge-brand h1 {
-    font-size: 2.4rem;
+  .footer-location-col, .footer-copyright-col, .footer-brand-col {
+    align-items: center;
+    justify-content: center;
+  }
+  .map-pin-btn {
+    align-self: center;
   }
   .modal-container {
     grid-template-columns: 1fr;
