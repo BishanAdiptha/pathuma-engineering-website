@@ -84,7 +84,7 @@ const COLLECTION_ITEMS = [
   },
   {
     isQuote: true,
-    quote: 'NEW IN 2024',
+    quote: 'NEW IN 2026',
     subquote: 'EXPLORE OUR LATEST ARCHITECTURAL IRONWORKS & STAINLESS FABRICATIONS'
   },
   {
@@ -92,8 +92,7 @@ const COLLECTION_ITEMS = [
     code: 'FOLIO CONSOLE',
     category: 'iron roofing',
     displayCategory: '2024 Novelties',
-    badgeLeft: 'NEW',
-    badgeRight: '2024',
+    badgeLeft: '02.',
     image: '/pathuma-engineering-website/assets/slide2.png',
     specs: {
       Material: 'Galvanized Structural Steel',
@@ -108,7 +107,7 @@ const COLLECTION_ITEMS = [
     code: 'NIPPON',
     category: 'grill gates',
     displayCategory: 'Bookcases',
-    badgeLeft: '01.',
+    badgeLeft: '03.',
     image: '/pathuma-engineering-website/assets/grid1.png',
     specs: {
       Material: 'Solid Square Bar Iron',
@@ -123,7 +122,7 @@ const COLLECTION_ITEMS = [
     code: 'XILO',
     category: 'collapsible gates',
     displayCategory: 'Coffee tables',
-    badgeLeft: '02.',
+    badgeLeft: '04.',
     image: '/pathuma-engineering-website/assets/grid2.png',
     specs: {
       Material: 'Stainless & High Carbon Steel',
@@ -138,7 +137,7 @@ const COLLECTION_ITEMS = [
     code: 'TWIST TABLE',
     category: 'aluminum fabrication',
     displayCategory: 'Lighting',
-    badgeLeft: '03.',
+    badgeLeft: '05.',
     image: '/pathuma-engineering-website/assets/slide4.png',
     specs: {
       Material: 'Anodized Aluminum Profile',
@@ -155,42 +154,24 @@ const COLLECTION_ITEMS = [
   },
   {
     id: '06',
-    code: 'PLATEAUX OF MIRROR',
-    category: 'custom ironwork',
-    displayCategory: 'Tables',
+    code: 'FREE SITE VISITS',
     badgeLeft: 'NOW!',
-    badgeRight: 'PROMO',
+    badgeRight: 'FREE',
     image: '/pathuma-engineering-website/assets/slide5.png',
-    specs: {
-      Material: 'Hand-Forged Wrought Iron',
-      Pattern: 'Geometric & Floral Lattice',
-      Application: 'Interiors & Main Entrance',
-      Craft: 'Master Hand Welding'
-    },
-    description: 'Custom wrought iron metal wall art and decorative privacy screens for luxury hotel lobbies and residences.'
   },
   {
     id: '07',
-    code: 'BRAME',
-    category: 'iron roofing',
-    displayCategory: 'Mirrors',
+    code: 'FREE QUOTATIONS',
     badgeLeft: 'NOW!',
-    badgeRight: 'PROMO',
+    badgeRight: 'FREE',
     image: '/pathuma-engineering-website/assets/slide3.png',
-    specs: {
-      Material: 'High Tensile Steel Frame',
-      Covering: 'Polycarbonate & Iron Sheets',
-      Drainage: 'Concealed Metal Guttering',
-      Durability: 'Storm & Heat Resistant'
-    },
-    description: 'Integrated steel frame security canopy and roofing solution built to withstand extreme monsoon conditions.'
   },
   {
     id: '08',
     code: 'ALPHA',
     category: 'iron roofing',
     displayCategory: 'Tables',
-    badgeLeft: '04.',
+    badgeLeft: '06.',
     image: '/pathuma-engineering-website/assets/slide2.png',
     specs: {
       Material: 'Structural I-Beam & Box Bar',
@@ -205,7 +186,7 @@ const COLLECTION_ITEMS = [
     code: 'GRAFFIO',
     category: 'collapsible gates',
     displayCategory: 'Sideboards',
-    badgeLeft: '05.',
+    badgeLeft: '07.',
     image: '/pathuma-engineering-website/assets/grid2.png',
     specs: {
       Material: 'Solid Steel Lattice',
@@ -220,7 +201,7 @@ const COLLECTION_ITEMS = [
     code: 'BAIA',
     category: 'grill gates',
     displayCategory: 'Dining tables',
-    badgeLeft: '06.',
+    badgeLeft: '08.',
     image: '/pathuma-engineering-website/assets/slide1.png',
     specs: {
       Material: 'Composite Iron & Timber Slat',
@@ -235,7 +216,7 @@ const COLLECTION_ITEMS = [
     code: 'AARE',
     category: 'custom ironwork',
     displayCategory: 'Bookcases',
-    badgeLeft: '07.',
+    badgeLeft: '09.',
     image: '/pathuma-engineering-website/assets/grid1.png',
     specs: {
       Material: 'Tubular Steel & Iron Plate',
@@ -250,7 +231,7 @@ const COLLECTION_ITEMS = [
     code: 'LUCE SOLIDA',
     category: 'aluminum fabrication',
     displayCategory: 'Lighting',
-    badgeLeft: '08.',
+    badgeLeft: '10.',
     image: '/pathuma-engineering-website/assets/slide4.png',
     specs: {
       Material: 'Heavy Gauge Aluminum',
