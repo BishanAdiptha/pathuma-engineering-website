@@ -303,12 +303,12 @@ export default function App() {
           <div className="hero-bottom-text-row">
             <div className="hero-text-col">
               <p>
-                With 20+ years of structural steel mastery, Pathuma Engineering Work crafts architectural grill gates, heavy-duty iron roofing, collapsible security barriers, and custom aluminum fabrication.
+                With 20+ years of ironwork experience, Pathuma Engineering Work crafts custom iron gates, security grills, hand railings, and antique-style decorative designs for homes, hotels, and companies. Based in Ragama and serving clients islandwide, every piece is built to the customer's exact measurements — not adjusted after the fact.
               </p>
             </div>
             <div className="hero-text-col">
               <p>
-                Engineered with heavy-grade materials, precision laser cutting, and anti-rust finishes for luxury residences, commercial complexes, and industrial sites islandwide across Sri Lanka.
+                Engineered with heavy-duty steel, Calsibal roofing sheets, and precision-fabricated aluminum, our work is finished with anti-rust coating and built to hold up against Sri Lanka's climate. From a single custom logo cutout to a full structural steel job, we handle design, fabrication, and installation from our Ragama workshop to any district in the country.
               </p>
             </div>
           </div>
@@ -418,15 +418,15 @@ export default function App() {
             </div>
 
             <h2 className="about-heading font-display">
-              20+ YEARS OF PRECISION IRONWORK & ARCHITECTURAL METAL CRAFT
+              IRONWORK & ARCHITECTURAL METAL CRAFT
             </h2>
 
             <p className="about-paragraph">
-              Pathuma Engineering Work is a premier construction and metal fabrication enterprise headquartered in Ragama, Sri Lanka, providing islandwide execution for residential homes, luxury boutique hotels, commercial complexes, and industrial sites.
+              Founded and led by Chamara Iresh Ranamuka, Pathuma Engineering Work is a premier construction and metal fabrication enterprise headquartered in Ragama, Sri Lanka, providing islandwide execution for residential homes, luxury boutique hotels, commercial complexes, and industrial sites.
             </p>
 
             <p className="about-paragraph">
-              We specialize in custom wrought iron gates, laser-cut security grilles, heavy industrial iron roofing trusses, smooth-operating collapsible gates, and modern aluminum fabrication systems. Every project undergoes rigorous quality control, heavy-gauge steel sourcing, anti-rust priming, and flawless installation.
+              Under his direction, the company specializes in custom wrought iron gates, hand railings, antique and decorative designs, laser-cut custom logo signage, heavy industrial iron roofing, boundary walls, structural steelwork, and modern aluminum fabrication. Every project undergoes rigorous quality control, heavy-gauge steel sourcing, anti-rust priming, and flawless installation.
             </p>
 
             <div className="about-stats-grid">
