@@ -32,35 +32,35 @@ const HERO_SLIDES = [
     id: '01',
     title: 'Architectural Grill Gates',
     subtitle: 'Custom Laser-Cut Perimeter & Security Gates',
-    image: '/assets/slide1.png',
+    image: '/pathuma-engineering-website/assets/slide1.png',
     desc: 'Engineered with high-density steel and precision laser craftsmanship for modern luxury villas and residences.'
   },
   {
     id: '02',
     title: 'Structural Iron Roofing',
     subtitle: 'Heavy Duty Steel Trusses & Canopies',
-    image: '/assets/slide2.png',
+    image: '/pathuma-engineering-website/assets/slide2.png',
     desc: 'Weatherproof industrial and residential iron roofing systems constructed to withstand extreme weather conditions.'
   },
   {
     id: '03',
     title: 'Collapsible Safety Gates',
     subtitle: 'Precision Folding Security Barriers',
-    image: '/assets/slide3.png',
+    image: '/pathuma-engineering-website/assets/slide3.png',
     desc: 'Heavy-duty steel collapsible gates with smooth roller track mechanisms for commercial shops & home entrances.'
   },
   {
     id: '04',
     title: 'Aluminum Fabrication',
     subtitle: 'Modern Glass & Architectural Facades',
-    image: '/assets/slide4.png',
+    image: '/pathuma-engineering-website/assets/slide4.png',
     desc: 'Sleek black anodized aluminum windows, doors, partitioning, and architectural curtain walls.'
   },
   {
     id: '05',
     title: 'Custom Metal Crafts',
     subtitle: 'Luxury Railings & Ironwork Sculptures',
-    image: '/assets/slide5.png',
+    image: '/pathuma-engineering-website/assets/slide5.png',
     desc: 'Custom wrought iron staircases, decorative grilles, and hotel ironwork tailored to client blueprints.'
   }
 ];
@@ -74,7 +74,7 @@ const COLLECTION_ITEMS = [
     displayCategory: 'Lighting',
     badgeLeft: 'NEW',
     badgeRight: '2024',
-    image: '/assets/slide1.png',
+    image: '/pathuma-engineering-website/assets/slide1.png',
     specs: {
       Material: 'Wrought Iron & Steel',
       Finish: 'Matte Powder Coating',
@@ -95,7 +95,7 @@ const COLLECTION_ITEMS = [
     displayCategory: '2024 Novelties',
     badgeLeft: 'NEW',
     badgeRight: '2024',
-    image: '/assets/slide2.png',
+    image: '/pathuma-engineering-website/assets/slide2.png',
     specs: {
       Material: 'Galvanized Structural Steel',
       Thickness: 'Gauge 14 - 16 Steel',
@@ -110,7 +110,7 @@ const COLLECTION_ITEMS = [
     category: 'grill gates',
     displayCategory: 'Bookcases',
     badgeLeft: '01.',
-    image: '/assets/grid1.png',
+    image: '/pathuma-engineering-website/assets/grid1.png',
     specs: {
       Material: 'Solid Square Bar Iron',
       'Hinge System': 'Heavy Duty Bearing Pivot',
@@ -125,7 +125,7 @@ const COLLECTION_ITEMS = [
     category: 'collapsible gates',
     displayCategory: 'Coffee tables',
     badgeLeft: '02.',
-    image: '/assets/grid2.png',
+    image: '/pathuma-engineering-website/assets/grid2.png',
     specs: {
       Material: 'Stainless & High Carbon Steel',
       Track: 'Embedded Floor & Overhead Rail',
@@ -140,7 +140,7 @@ const COLLECTION_ITEMS = [
     category: 'aluminum fabrication',
     displayCategory: 'Lighting',
     badgeLeft: '03.',
-    image: '/assets/slide4.png',
+    image: '/pathuma-engineering-website/assets/slide4.png',
     specs: {
       Material: 'Anodized Aluminum Profile',
       Glass: '8mm Tempered Safety Glass',
@@ -161,7 +161,7 @@ const COLLECTION_ITEMS = [
     displayCategory: 'Tables',
     badgeLeft: 'NOW!',
     badgeRight: 'PROMO',
-    image: '/assets/slide5.png',
+    image: '/pathuma-engineering-website/assets/slide5.png',
     specs: {
       Material: 'Hand-Forged Wrought Iron',
       Pattern: 'Geometric & Floral Lattice',
@@ -177,7 +177,7 @@ const COLLECTION_ITEMS = [
     displayCategory: 'Mirrors',
     badgeLeft: 'NOW!',
     badgeRight: 'PROMO',
-    image: '/assets/slide3.png',
+    image: '/pathuma-engineering-website/assets/slide3.png',
     specs: {
       Material: 'High Tensile Steel Frame',
       Covering: 'Polycarbonate & Iron Sheets',
@@ -192,7 +192,7 @@ const COLLECTION_ITEMS = [
     category: 'iron roofing',
     displayCategory: 'Tables',
     badgeLeft: '04.',
-    image: '/assets/slide2.png',
+    image: '/pathuma-engineering-website/assets/slide2.png',
     specs: {
       Material: 'Structural I-Beam & Box Bar',
       Span: 'Up to 30 Feet Unsupported',
@@ -207,7 +207,7 @@ const COLLECTION_ITEMS = [
     category: 'collapsible gates',
     displayCategory: 'Sideboards',
     badgeLeft: '05.',
-    image: '/assets/grid2.png',
+    image: '/pathuma-engineering-website/assets/grid2.png',
     specs: {
       Material: 'Solid Steel Lattice',
       Locking: 'Internal Deadbolt System',
@@ -222,7 +222,7 @@ const COLLECTION_ITEMS = [
     category: 'grill gates',
     displayCategory: 'Dining tables',
     badgeLeft: '06.',
-    image: '/assets/slide1.png',
+    image: '/pathuma-engineering-website/assets/slide1.png',
     specs: {
       Material: 'Composite Iron & Timber Slat',
       Motor: 'Automated Sliding Gate Compatible',
@@ -237,7 +237,7 @@ const COLLECTION_ITEMS = [
     category: 'custom ironwork',
     displayCategory: 'Bookcases',
     badgeLeft: '07.',
-    image: '/assets/grid1.png',
+    image: '/pathuma-engineering-website/assets/grid1.png',
     specs: {
       Material: 'Tubular Steel & Iron Plate',
       Lighting: 'Integrated LED Strip Channel',
@@ -252,7 +252,7 @@ const COLLECTION_ITEMS = [
     category: 'aluminum fabrication',
     displayCategory: 'Lighting',
     badgeLeft: '08.',
-    image: '/assets/slide4.png',
+    image: '/pathuma-engineering-website/assets/slide4.png',
     specs: {
       Material: 'Heavy Gauge Aluminum',
       Glazing: 'Double Glazed Soundproof',
@@ -301,7 +301,7 @@ export default function App() {
 
         <div className="header-logo">
           <a href="#top" title="Pathuma Engineering Work Logo">
-            <img src="/assets/logo-pew.png" alt="Pathuma Engineering Work PEW Logo" />
+            <img src="/pathuma-engineering-website/assets/logo-pew.png" alt="Pathuma Engineering Work PEW Logo" />
           </a>
         </div>
 
@@ -513,7 +513,7 @@ export default function App() {
           {/* Right: Founder Photo & Info */}
           <div className="founder-photo-block">
             <div className="founder-photo-wrap">
-              <img src="/assets/founder-photo.png" alt="Chamara Iresh Ranamuka — Founder of Pathuma Engineering Work" className="founder-photo-img" />
+              <img src="/pathuma-engineering-website/assets/founder-photo.png" alt="Chamara Iresh Ranamuka — Founder of Pathuma Engineering Work" className="founder-photo-img" />
               <div className="founder-photo-overlay"></div>
             </div>
 
@@ -558,7 +558,7 @@ export default function App() {
 
           {/* Right: Logo */}
           <div className="footer-brand-col">
-            <img src="/assets/logo-pew.png" alt="Pathuma Engineering Work Logo" className="footer-logo-img" />
+            <img src="/pathuma-engineering-website/assets/logo-pew.png" alt="Pathuma Engineering Work Logo" className="footer-logo-img" />
           </div>
 
         </div>
