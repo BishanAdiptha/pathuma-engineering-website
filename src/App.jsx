@@ -16,7 +16,7 @@ const WhatsAppIcon = ({ size = 28 }) => (
 
 const FacebookIcon = ({ size = 28 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
   </svg>
 );
 
@@ -309,7 +309,7 @@ export default function App() {
           <a href="#about" className="header-link">
             ABOUT US
           </a>
-          <a href="#contact" className="header-link">
+          <a href="#social" className="header-link">
             CONTACT
           </a>
         </div>
@@ -474,26 +474,26 @@ export default function App() {
       {/* ABOUT US — FOUNDER SECTION */}
       <section className="about-section" id="about">
         <div className="founder-row">
-          
+
           {/* Left: Company Details & Experience */}
           <div className="about-content">
             <div className="about-label">
               <span>ABOUT OUR COMPANY</span>
               <div className="line"></div>
             </div>
-            
+
             <h2 className="about-heading font-display">
               15+ YEARS OF PRECISION IRONWORK & ARCHITECTURAL METAL CRAFT
             </h2>
-            
+
             <p className="about-paragraph">
               Pathuma Engineering Work is a premier construction and metal fabrication enterprise headquartered in Ragama, Sri Lanka, providing islandwide execution for residential homes, luxury boutique hotels, commercial complexes, and industrial sites.
             </p>
-            
+
             <p className="about-paragraph">
               We specialize in custom wrought iron gates, laser-cut security grilles, heavy industrial iron roofing trusses, smooth-operating collapsible gates, and modern aluminum fabrication systems. Every project undergoes rigorous quality control, heavy-gauge steel sourcing, anti-rust priming, and flawless installation.
             </p>
-            
+
             <div className="about-stats-grid">
               <div className="stat-item">
                 <h3>15+</h3>
