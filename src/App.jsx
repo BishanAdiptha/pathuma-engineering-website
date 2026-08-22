@@ -69,9 +69,9 @@ const HERO_SLIDES = [
 const COLLECTION_ITEMS = [
   {
     id: '01',
-    code: 'LIGHT & SHADE',
+    code: 'GATES',
     category: 'grill gates',
-    displayCategory: 'Lighting',
+    displayCategory: 'sliding, swing, driveway',
     badgeLeft: '01.',
     image: '/pathuma-engineering-website/assets/slide1.png',
     specs: {
@@ -89,9 +89,9 @@ const COLLECTION_ITEMS = [
   },
   {
     id: '02',
-    code: 'FOLIO CONSOLE',
+    code: 'WINDOW & DOOR GRILLS',
     category: 'iron roofing',
-    displayCategory: '2024 Novelties',
+    displayCategory: 'security & decorative',
     badgeLeft: '02.',
     image: '/pathuma-engineering-website/assets/slide2.png',
     specs: {
@@ -104,9 +104,9 @@ const COLLECTION_ITEMS = [
   },
   {
     id: '03',
-    code: 'NIPPON',
+    code: 'HAND RAILLING & BALCONIES',
     category: 'grill gates',
-    displayCategory: 'Bookcases',
+    displayCategory: 'staircases, balconies, verandas',
     badgeLeft: '03.',
     image: '/pathuma-engineering-website/assets/grid1.png',
     specs: {
@@ -119,9 +119,9 @@ const COLLECTION_ITEMS = [
   },
   {
     id: '04',
-    code: 'XILO',
+    code: 'ROOFING',
     category: 'collapsible gates',
-    displayCategory: 'Coffee tables',
+    displayCategory: 'calsibal / steel roofing sheets',
     badgeLeft: '04.',
     image: '/pathuma-engineering-website/assets/grid2.png',
     specs: {
@@ -134,9 +134,9 @@ const COLLECTION_ITEMS = [
   },
   {
     id: '05',
-    code: 'TWIST TABLE',
+    code: 'CANOPLES & CAR PORCHES',
     category: 'aluminum fabrication',
-    displayCategory: 'Lighting',
+    displayCategory: 'steel + polycarbonate',
     badgeLeft: '05.',
     image: '/pathuma-engineering-website/assets/slide4.png',
     specs: {
@@ -168,9 +168,9 @@ const COLLECTION_ITEMS = [
   },
   {
     id: '08',
-    code: 'ALPHA',
+    code: 'LOGO & SIGNAGE CUTTING',
     category: 'iron roofing',
-    displayCategory: 'Tables',
+    displayCategory: 'metal signs, name boards, logo designs, 3D letter',
     badgeLeft: '06.',
     image: '/pathuma-engineering-website/assets/slide2.png',
     specs: {
@@ -183,9 +183,9 @@ const COLLECTION_ITEMS = [
   },
   {
     id: '09',
-    code: 'GRAFFIO',
+    code: 'OTHER DESIGNS & FABRICATIONS',
     category: 'collapsible gates',
-    displayCategory: 'Sideboards',
+    displayCategory: 'furniture, trolleys, racks, Antique Ironwork',
     badgeLeft: '07.',
     image: '/pathuma-engineering-website/assets/grid2.png',
     specs: {
@@ -195,51 +195,6 @@ const COLLECTION_ITEMS = [
       Finish: 'Anti-Corrosion Primer & Enamel'
     },
     description: 'Dual-folding collapsible iron gate featuring internal locking mechanisms and seamless track glides.'
-  },
-  {
-    id: '10',
-    code: 'BAIA',
-    category: 'grill gates',
-    displayCategory: 'Dining tables',
-    badgeLeft: '08.',
-    image: '/pathuma-engineering-website/assets/slide1.png',
-    specs: {
-      Material: 'Composite Iron & Timber Slat',
-      Motor: 'Automated Sliding Gate Compatible',
-      Finish: 'UV Protected Weather Coat',
-      Height: 'Standard 6ft - 10ft Custom'
-    },
-    description: 'Modern heavy perimeter entrance gate designed with automated motor compatibility for effortless opening.'
-  },
-  {
-    id: '11',
-    code: 'AARE',
-    category: 'custom ironwork',
-    displayCategory: 'Bookcases',
-    badgeLeft: '09.',
-    image: '/pathuma-engineering-website/assets/grid1.png',
-    specs: {
-      Material: 'Tubular Steel & Iron Plate',
-      Lighting: 'Integrated LED Strip Channel',
-      Installation: 'Anchored Concrete Base',
-      Style: 'Monolithic Architectural'
-    },
-    description: 'Illuminated iron gate post and entrance pillar structure blending security metalwork with architectural lighting.'
-  },
-  {
-    id: '12',
-    code: 'LUCE SOLIDA',
-    category: 'aluminum fabrication',
-    displayCategory: 'Lighting',
-    badgeLeft: '10.',
-    image: '/pathuma-engineering-website/assets/slide4.png',
-    specs: {
-      Material: 'Heavy Gauge Aluminum',
-      Glazing: 'Double Glazed Soundproof',
-      Hardware: 'European Precision Handles',
-      Color: 'Matt Black & Dark Bronze'
-    },
-    description: 'Acoustic soundproof aluminum window and curtain wall fabrication for luxury villas and urban commercial spaces.'
   }
 ];
 
