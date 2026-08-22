@@ -90,33 +90,37 @@ button {
   top: 0;
   z-index: 100;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  gap: clamp(2.2rem, 6.5vw, 8rem);
-  padding: clamp(0.6rem, 1.2vw, 0.9rem) clamp(0.5rem, 2vw, 2rem);
+  gap: clamp(0.4rem, 2vw, 8rem);
+  padding: clamp(0.5rem, 1vw, 0.9rem) clamp(0.3rem, 1vw, 2rem);
   background-color: rgba(7, 7, 7, 0.92);
   backdrop-filter: blur(16px);
   border-bottom: none;
   width: 100%;
+  overflow: hidden;
 }
 
 .header-left,
 .header-right {
   display: flex;
   align-items: center;
-  gap: clamp(1.8rem, 4.2vw, 5rem);
+  gap: clamp(0.4rem, 2vw, 5rem);
+  flex-shrink: 0;
 }
 
 .header-link {
-  font-size: clamp(0.75rem, 1.3vw, 0.92rem);
+  font-size: clamp(0.52rem, 1.3vw, 0.92rem);
   text-transform: uppercase;
-  letter-spacing: clamp(0.04em, 0.1vw, 0.12em);
+  letter-spacing: clamp(0.01em, 0.08vw, 0.12em);
   font-weight: 500;
   color: var(--text-muted);
   transition: var(--transition-smooth);
   position: relative;
   padding-bottom: 2px;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .header-link:hover,
@@ -146,7 +150,7 @@ button {
   justify-content: center;
   flex-shrink: 0;
   margin: 0;
-  padding: 0 clamp(1.5rem, 4.2vw, 5rem);
+  padding: 0 clamp(0.3rem, 1.5vw, 5rem);
 }
 
 .header-logo img {
@@ -1080,21 +1084,6 @@ button {
 }
 
 @media (max-width: 850px) {
-  .header-nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  .header-logo {
-    order: -1;
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-  .header-left, .header-right {
-    width: 100%;
-    justify-content: center;
-    gap: 1.5rem;
-  }
   .hero-bottom-text-row {
     grid-template-columns: 1fr;
     gap: 1.25rem;
