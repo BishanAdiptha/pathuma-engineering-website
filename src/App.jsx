@@ -154,14 +154,14 @@ const COLLECTION_ITEMS = [
   },
   {
     id: '06',
-    code: 'FREE SITE VISITS',
+    code: 'FREE SITE VISITS ',
     badgeLeft: 'NOW!',
     badgeRight: 'FREE',
     image: '/pathuma-engineering-website/assets/slide5.png',
   },
   {
     id: '07',
-    code: 'FREE QUOTATIONS',
+    code: 'FREE QUOTATIONS ',
     badgeLeft: 'NOW!',
     badgeRight: 'FREE',
     image: '/pathuma-engineering-website/assets/slide3.png',
@@ -348,7 +348,7 @@ export default function App() {
           <div className="hero-bottom-text-row">
             <div className="hero-text-col">
               <p>
-                With 15+ years of structural steel mastery, Pathuma Engineering Work crafts architectural grill gates, heavy-duty iron roofing, collapsible security barriers, and custom aluminum fabrication.
+                With 20+ years of structural steel mastery, Pathuma Engineering Work crafts architectural grill gates, heavy-duty iron roofing, collapsible security barriers, and custom aluminum fabrication.
               </p>
             </div>
             <div className="hero-text-col">
@@ -463,7 +463,7 @@ export default function App() {
             </div>
 
             <h2 className="about-heading font-display">
-              15+ YEARS OF PRECISION IRONWORK & ARCHITECTURAL METAL CRAFT
+              20+ YEARS OF PRECISION IRONWORK & ARCHITECTURAL METAL CRAFT
             </h2>
 
             <p className="about-paragraph">
