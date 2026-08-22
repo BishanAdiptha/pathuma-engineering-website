@@ -335,6 +335,8 @@ button {
   color: rgba(255, 255, 255, 0.55);
   font-family: var(--font-body);
 }
+
+.slideshow-btn {
   align-items: center;
   justify-content: center;
   color: #fff;
