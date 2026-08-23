@@ -31,35 +31,35 @@ const PhoneIcon = ({ size = 28 }) => (
 // Hero slideshow 5 photos data
 const HERO_SLIDES = [
   {
-    id: '01',
+    id: '1',
     title: 'Architectural Grill Gates',
     subtitle: 'Custom Laser-Cut Perimeter & Security Gates',
     image: '/pathuma-engineering-website/assets/1st.jpg',
     desc: 'Engineered with high-density steel and precision laser craftsmanship for modern luxury villas and residences.'
   },
   {
-    id: '02',
+    id: '2',
     title: 'Structural Iron Roofing',
     subtitle: 'Heavy Duty Steel Trusses & Canopies',
     image: '/pathuma-engineering-website/assets/2nd.jpg',
     desc: 'Weatherproof industrial and residential iron roofing systems constructed to withstand extreme weather conditions.'
   },
   {
-    id: '03',
+    id: '3',
     title: 'Collapsible Safety Gates',
     subtitle: 'Precision Folding Security Barriers',
     image: '/pathuma-engineering-website/assets/3rd.jpg',
     desc: 'Heavy-duty steel collapsible gates with smooth roller track mechanisms for commercial shops & home entrances.'
   },
   {
-    id: '04',
+    id: '4',
     title: 'Aluminum Fabrication',
     subtitle: 'Modern Glass & Architectural Facades',
     image: '/pathuma-engineering-website/assets/4th.jpg',
     desc: 'Sleek black anodized aluminum windows, doors, partitioning, and architectural curtain walls.'
   },
   {
-    id: '05',
+    id: '5',
     title: 'Custom Metal Crafts',
     subtitle: 'Luxury Railings & Ironwork Sculptures',
     image: '/pathuma-engineering-website/assets/5th.jpg',
@@ -204,40 +204,40 @@ function GalleryModal({ item, images, onClose }) {
   const all = images.length ? images : [item.image];
   const [active, setActive] = useState(0);
   const total = all.length;
-  
+
   const prev = () => setActive(i => (i - 1 + total) % total);
   const next = () => setActive(i => (i + 1) % total);
-  
+
   useEffect(() => {
     const k = e => { if (e.key === 'ArrowLeft') prev(); if (e.key === 'ArrowRight') next(); if (e.key === 'Escape') onClose(); };
     window.addEventListener('keydown', k);
     return () => window.removeEventListener('keydown', k);
   }, []);
-  
+
   const fanStyle = idx => {
     const offset = idx - active;
     const abs = Math.abs(offset);
     if (abs > 2) return { display: 'none' };
-    const rot = offset < 0 ? -[0,12,24][abs] : [0,12,24][abs];
-    const trans = offset < 0 ? -[0,160,290][abs] : [0,160,290][abs];
-    const scale = [1,0.78,0.6][abs];
-    const z = [10,7,4][abs];
-    const op = [1,0.75,0.45][abs];
-    return { transform: `translateX(${trans}px) rotate(${rot}deg) scale(${scale})`, zIndex: z, opacity: op, cursor: abs===0? 'default':'pointer' };
+    const rot = offset < 0 ? -[0, 12, 24][abs] : [0, 12, 24][abs];
+    const trans = offset < 0 ? -[0, 160, 290][abs] : [0, 160, 290][abs];
+    const scale = [1, 0.78, 0.6][abs];
+    const z = [10, 7, 4][abs];
+    const op = [1, 0.75, 0.45][abs];
+    return { transform: `translateX(${trans}px) rotate(${rot}deg) scale(${scale})`, zIndex: z, opacity: op, cursor: abs === 0 ? 'default' : 'pointer' };
   };
-  
+
   return (
     <div className="gallery-backdrop" onClick={onClose}>
-      <div className="gallery-modal" onClick={e=>e.stopPropagation()}>
+      <div className="gallery-modal" onClick={e => e.stopPropagation()}>
         <button className="gallery-close-btn" onClick={onClose} aria-label="Close"><X size={24} /></button>
         <div className="gallery-header">
           <span className="gallery-label font-mono">{item.code}</span>
-          <span className="gallery-counter font-mono">{String(active+1).padStart(2,'0')} / {String(total).padStart(2,'0')}</span>
+          <span className="gallery-counter font-mono">{String(active + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}</span>
         </div>
         <div className="gallery-fan-stage">
           {all.map((src, i) => (
-            <div key={i} className={`gallery-polaroid ${i===active?'gallery-polaroid--active':''}`} style={fanStyle(i)} onClick={() => i!==active && setActive(i)}>
-              <div className="gallery-polaroid-img-wrap"><img src={src} alt={`${item.code} ${i+1}`} draggable={false} /></div>
+            <div key={i} className={`gallery-polaroid ${i === active ? 'gallery-polaroid--active' : ''}`} style={fanStyle(i)} onClick={() => i !== active && setActive(i)}>
+              <div className="gallery-polaroid-img-wrap"><img src={src} alt={`${item.code} ${i + 1}`} draggable={false} /></div>
             </div>
           ))}
         </div>
@@ -245,7 +245,7 @@ function GalleryModal({ item, images, onClose }) {
           <button className="gallery-nav-btn" onClick={prev} aria-label="Prev"><ChevronLeft size={28} /></button>
           <div className="gallery-dots">
             {all.map((_, i) => (
-              <button key={i} className={`gallery-dot ${i===active?'gallery-dot--active':''}`} onClick={()=>setActive(i)} aria-label={`Go to ${i+1}`} />
+              <button key={i} className={`gallery-dot ${i === active ? 'gallery-dot--active' : ''}`} onClick={() => setActive(i)} aria-label={`Go to ${i + 1}`} />
             ))}
           </div>
           <button className="gallery-nav-btn" onClick={next} aria-label="Next"><ChevronRight size={28} /></button>
@@ -284,14 +284,14 @@ export default function App() {
       setCurrentImgIdx(0);
       return;
     }
-    
+
     // Filter the pre-loaded glob object for the currently selected product
     const prefix = `/public/assets/gallery-${selectedProduct.id}/`;
     const images = Object.keys(allGalleryImages)
       .filter(key => key.startsWith(prefix))
       // Since it's in public, we strip /public and prepend base url for the image src
       .map(key => '/pathuma-engineering-website' + key.replace('/public', ''));
-      
+
     setGalleryImages(images);
     setCurrentImgIdx(0);
   }, [selectedProduct]);
@@ -381,7 +381,7 @@ export default function App() {
 
             <div className="hero-right-preview-box">
               <span className="hero-step-counter font-mono">
-                {HERO_SLIDES[currentSlide].id}/05
+                {HERO_SLIDES[currentSlide].id}/5
               </span>
               <div className="hero-thumb-box">
                 <img
@@ -428,7 +428,7 @@ export default function App() {
             }
 
             return (
-            <div key={item.id} className="collection-card" onClick={() => handleItemClick(item)} style={{ cursor: (item.id === '06' || item.id === '07') ? 'default' : 'pointer' }}>
+              <div key={item.id} className="collection-card" onClick={() => handleItemClick(item)} style={{ cursor: (item.id === '06' || item.id === '07') ? 'default' : 'pointer' }}>
                 <div className="card-top-row">
                   <span className="card-badge-left font-mono">{item.badgeLeft}</span>
                   {item.badgeRight && <span className="card-badge-right font-mono">{item.badgeRight}</span>}
