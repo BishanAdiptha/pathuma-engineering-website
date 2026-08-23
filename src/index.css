@@ -698,7 +698,7 @@ button {
   background-color: #080808;
 }
 
-/* About Section — Founder */
+/* About Section â€” Founder */
 .about-section {
   padding: clamp(2rem, 4vw, 5rem) clamp(1rem, 3vw, 4rem);
   background-color: #060606;
@@ -1110,3 +1110,130 @@ button {
     min-height: 250px;
   }
 }
+
+/* --- FAN GALLERY MODAL --- */
+.gallery-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(5, 5, 5, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.gallery-modal {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.gallery-close-btn {
+  position: absolute;
+  top: -2rem;
+  right: -1rem;
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: all 0.3s;
+  z-index: 50;
+}
+.gallery-close-btn:hover {
+  background: rgba(255,255,255,0.2);
+  transform: rotate(90deg);
+}
+.gallery-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.gallery-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #fff;
+  text-transform: uppercase;
+}
+.gallery-counter {
+  font-size: 0.9rem;
+  color: #888;
+  letter-spacing: 0.1em;
+}
+.gallery-fan-stage {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+.gallery-polaroid {
+  position: absolute;
+  border-radius: 4px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform, opacity;
+  width: clamp(280px, 40vw, 500px);
+  aspect-ratio: 4/5;
+  transform-origin: bottom center;
+}
+.gallery-polaroid-img-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f0f0f0;
+}
+.gallery-polaroid-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  z-index: 20;
+}
+.gallery-nav-btn {
+  color: #fff;
+  padding: 0.5rem;
+  transition: transform 0.2s;
+}
+.gallery-nav-btn:hover {
+  transform: scale(1.2);
+}
+.gallery-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+.gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  transition: all 0.3s;
+}
+.gallery-dot--active {
+  background: #fff;
+  transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+  .gallery-polaroid {
+    width: clamp(220px, 70vw, 320px);
+  }
+  .gallery-close-btn {
+    top: -3rem;
+    right: 0;
+  }
+}
+

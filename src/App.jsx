@@ -3,7 +3,9 @@ import {
   MessageSquare,
   ArrowUpRight,
   X,
-  ExternalLink
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 
 // Custom SVG Icons for Big Black & White Facebook and WhatsApp
@@ -198,12 +200,109 @@ const COLLECTION_ITEMS = [
   }
 ];
 
+function GalleryModal({ item, images, onClose }) {
+  const all = images.length ? images : [item.image];
+  const [active, setActive] = useState(0);
+  const total = all.length;
+  
+  const prev = () => setActive(i => (i - 1 + total) % total);
+  const next = () => setActive(i => (i + 1) % total);
+  
+  useEffect(() => {
+    const k = e => { if (e.key === 'ArrowLeft') prev(); if (e.key === 'ArrowRight') next(); if (e.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', k);
+    return () => window.removeEventListener('keydown', k);
+  }, []);
+  
+  const fanStyle = idx => {
+    const offset = idx - active;
+    const abs = Math.abs(offset);
+    if (abs > 2) return { display: 'none' };
+    const rot = offset < 0 ? -[0,12,24][abs] : [0,12,24][abs];
+    const trans = offset < 0 ? -[0,160,290][abs] : [0,160,290][abs];
+    const scale = [1,0.78,0.6][abs];
+    const z = [10,7,4][abs];
+    const op = [1,0.75,0.45][abs];
+    return { transform: `translateX(${trans}px) rotate(${rot}deg) scale(${scale})`, zIndex: z, opacity: op, cursor: abs===0? 'default':'pointer' };
+  };
+  
+  return (
+    <div className="gallery-backdrop" onClick={onClose}>
+      <div className="gallery-modal" onClick={e=>e.stopPropagation()}>
+        <button className="gallery-close-btn" onClick={onClose} aria-label="Close"><X size={24} /></button>
+        <div className="gallery-header">
+          <span className="gallery-label font-mono">{item.code}</span>
+          <span className="gallery-counter font-mono">{String(active+1).padStart(2,'0')} / {String(total).padStart(2,'0')}</span>
+        </div>
+        <div className="gallery-fan-stage">
+          {all.map((src, i) => (
+            <div key={i} className={`gallery-polaroid ${i===active?'gallery-polaroid--active':''}`} style={fanStyle(i)} onClick={() => i!==active && setActive(i)}>
+              <div className="gallery-polaroid-img-wrap"><img src={src} alt={`${item.code} ${i+1}`} draggable={false} /></div>
+            </div>
+          ))}
+        </div>
+        <div className="gallery-nav">
+          <button className="gallery-nav-btn" onClick={prev} aria-label="Prev"><ChevronLeft size={28} /></button>
+          <div className="gallery-dots">
+            {all.map((_, i) => (
+              <button key={i} className={`gallery-dot ${i===active?'gallery-dot--active':''}`} onClick={()=>setActive(i)} aria-label={`Go to ${i+1}`} />
+            ))}
+          </div>
+          <button className="gallery-nav-btn" onClick={next} aria-label="Next"><ChevronRight size={28} /></button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   // Current active hero slide index (0 to 4)
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  // State for selected product modal
   const [selectedProduct, setSelectedProduct] = useState(null);
+  // Gallery images for the selected product
+  const [galleryImages, setGalleryImages] = useState([]);
+  const [currentImgIdx, setCurrentImgIdx] = useState(0);
 
+  // Handler for clicking collection items
+  const handleItemClick = (item) => {
+    // Free items (ids 06 and 07) are non-clickable
+    if (item.id === '06' || item.id === '07') {
+      return;
+    }
+    setSelectedProduct(item);
+  };
+
+  // Load all gallery images eagerly. This MUST use a static string literal.
+  const allGalleryImages = import.meta.glob('/public/assets/gallery-*/*.{jpg,jpeg,png}', { eager: true });
+
+  // Load gallery images when a product is selected
+  useEffect(() => {
+    if (!selectedProduct) {
+      setGalleryImages([]);
+      setCurrentImgIdx(0);
+      return;
+    }
+    
+    // Filter the pre-loaded glob object for the currently selected product
+    const prefix = `/public/assets/gallery-${selectedProduct.id}/`;
+    const images = Object.keys(allGalleryImages)
+      .filter(key => key.startsWith(prefix))
+      // Since it's in public, we strip /public and prepend base url for the image src
+      .map(key => '/pathuma-engineering-website' + key.replace('/public', ''));
+      
+    setGalleryImages(images);
+    setCurrentImgIdx(0);
+  }, [selectedProduct]);
+
+  // Navigation handlers for carousel
+  const prevImage = () => {
+    setCurrentImgIdx((idx) => (idx - 1 + galleryImages.length) % galleryImages.length);
+  };
+  const nextImage = () => {
+    setCurrentImgIdx((idx) => (idx + 1) % galleryImages.length);
+  };
   // Auto slide effect (changes photo automatically one by one)
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -329,11 +428,7 @@ export default function App() {
             }
 
             return (
-              <div
-                key={item.id}
-                className="collection-card"
-                onClick={() => setSelectedProduct(item)}
-              >
+            <div key={item.id} className="collection-card" onClick={() => handleItemClick(item)} style={{ cursor: (item.id === '06' || item.id === '07') ? 'default' : 'pointer' }}>
                 <div className="card-top-row">
                   <span className="card-badge-left font-mono">{item.badgeLeft}</span>
                   {item.badgeRight && <span className="card-badge-right font-mono">{item.badgeRight}</span>}
@@ -346,7 +441,10 @@ export default function App() {
 
                 <div className="card-bottom-info">
                   <span className="card-see-now font-mono">
-                    See Now <ArrowUpRight size={10} />
+                    {/* Hide "See Now" for free items */}
+                    {(item.id !== '06' && item.id !== '07') && (
+                      <>See Now <ArrowUpRight size={10} /></>
+                    )}
                   </span>
                   <h3 className="card-item-title font-display">{item.code}</h3>
                   <span className="card-item-category">{item.displayCategory}</span>
@@ -500,45 +598,7 @@ export default function App() {
       </footer>
 
       {/* DETAIL MODAL POPUP FOR COLLECTION PRODUCTS */}
-      {selectedProduct && (
-        <div className="modal-backdrop" onClick={() => setSelectedProduct(null)}>
-          <div className="modal-container" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close-btn" onClick={() => setSelectedProduct(null)}>
-              <X size={20} />
-            </button>
-
-            <div className="modal-img-wrapper">
-              <img src={selectedProduct.image} alt={selectedProduct.code} />
-            </div>
-
-            <div className="modal-details">
-              <div>
-                <span className="modal-number font-mono">{selectedProduct.id} / CATALOGUE 2026</span>
-                <h2 className="modal-title font-display">{selectedProduct.code}</h2>
-                <p className="modal-desc">{selectedProduct.description}</p>
-
-                <div className="modal-specs-list">
-                  {Object.entries(selectedProduct.specs).map(([key, value]) => (
-                    <div key={key} className="spec-item">
-                      <span className="spec-key">{key}</span>
-                      <span className="spec-val">{value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <a
-                href={getWhatsAppLink(selectedProduct.code)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="modal-cta-btn"
-              >
-                <MessageSquare size={18} /> INQUIRE THIS PRODUCT ON WHATSAPP
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
+      {selectedProduct && <GalleryModal item={selectedProduct} images={galleryImages} onClose={() => setSelectedProduct(null)} />}
     </div>
   );
 }
