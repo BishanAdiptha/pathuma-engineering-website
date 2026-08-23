@@ -73,7 +73,7 @@ const COLLECTION_ITEMS = [
     category: 'grill gates',
     displayCategory: 'sliding, swing, driveway',
     badgeLeft: '01.',
-    image: '/pathuma-engineering-website/assets/slide1.png',
+    image: '/pathuma-engineering-website/assets/GATE.jpg',
     specs: {
       Material: 'Wrought Iron & Steel',
       Finish: 'Matte Powder Coating',
@@ -93,7 +93,7 @@ const COLLECTION_ITEMS = [
     category: 'iron roofing',
     displayCategory: 'security & decorative',
     badgeLeft: '02.',
-    image: '/pathuma-engineering-website/assets/slide2.png',
+    image: '/pathuma-engineering-website/assets/WINDOW.jpg',
     specs: {
       Material: 'Galvanized Structural Steel',
       Thickness: 'Gauge 14 - 16 Steel',
@@ -108,7 +108,7 @@ const COLLECTION_ITEMS = [
     category: 'grill gates',
     displayCategory: 'staircases, balconies, verandas',
     badgeLeft: '03.',
-    image: '/pathuma-engineering-website/assets/grid1.png',
+    image: '/pathuma-engineering-website/assets/HAND RAILLING.jpg',
     specs: {
       Material: 'Solid Square Bar Iron',
       'Hinge System': 'Heavy Duty Bearing Pivot',
@@ -123,7 +123,7 @@ const COLLECTION_ITEMS = [
     category: 'collapsible gates',
     displayCategory: 'calsibal / steel roofing sheets',
     badgeLeft: '04.',
-    image: '/pathuma-engineering-website/assets/grid2.png',
+    image: '/pathuma-engineering-website/assets/ROOFING.jpg',
     specs: {
       Material: 'Stainless & High Carbon Steel',
       Track: 'Embedded Floor & Overhead Rail',
@@ -138,7 +138,7 @@ const COLLECTION_ITEMS = [
     category: 'aluminum fabrication',
     displayCategory: 'steel + polycarbonate',
     badgeLeft: '05.',
-    image: '/pathuma-engineering-website/assets/slide4.png',
+    image: '/pathuma-engineering-website/assets/CAR PORCHES.jpg',
     specs: {
       Material: 'Anodized Aluminum Profile',
       Glass: '8mm Tempered Safety Glass',
@@ -157,14 +157,14 @@ const COLLECTION_ITEMS = [
     code: 'FREE SITE VISITS ',
     badgeLeft: 'NOW!',
     badgeRight: 'FREE',
-    image: '/pathuma-engineering-website/assets/slide5.png',
+    image: '/pathuma-engineering-website/assets/SITE VISIT.jpg',
   },
   {
     id: '07',
     code: 'FREE QUOTATIONS ',
     badgeLeft: 'NOW!',
     badgeRight: 'FREE',
-    image: '/pathuma-engineering-website/assets/slide3.png',
+    image: '/pathuma-engineering-website/assets/QUOTATIONS.jpg',
   },
   {
     id: '08',
@@ -172,7 +172,7 @@ const COLLECTION_ITEMS = [
     category: 'iron roofing',
     displayCategory: 'metal signs, name boards, logo designs, 3D letter',
     badgeLeft: '06.',
-    image: '/pathuma-engineering-website/assets/slide2.png',
+    image: '/pathuma-engineering-website/assets/LOGO & SIGNAGE.jpg',
     specs: {
       Material: 'Structural I-Beam & Box Bar',
       Span: 'Up to 30 Feet Unsupported',
@@ -187,7 +187,7 @@ const COLLECTION_ITEMS = [
     category: 'collapsible gates',
     displayCategory: 'furniture, trolleys, racks, Antique Ironwork',
     badgeLeft: '07.',
-    image: '/pathuma-engineering-website/assets/grid2.png',
+    image: '/pathuma-engineering-website/assets/OTHER DESIGNS.jpg',
     specs: {
       Material: 'Solid Steel Lattice',
       Locking: 'Internal Deadbolt System',
