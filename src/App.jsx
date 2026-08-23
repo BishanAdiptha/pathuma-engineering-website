@@ -123,7 +123,7 @@ const COLLECTION_ITEMS = [
     id: '04',
     code: 'ROOFING',
     category: 'collapsible gates',
-    displayCategory: 'calsibal / steel roofing sheets',
+    displayCategory: 'amano sheets / steel roofing sheets',
     badgeLeft: '04.',
     image: '/pathuma-engineering-website/assets/ROOFING.jpg',
     specs: {
@@ -155,21 +155,21 @@ const COLLECTION_ITEMS = [
     subquote: 'SPECIAL PROMOTIONAL PRICING FOR HOTEL & COMMERCIAL COMPLEX PROJECTS'
   },
   {
-    id: '06',
+    id: 'free-1',
     code: 'FREE SITE VISITS ',
     badgeLeft: 'NOW!',
     badgeRight: 'FREE',
     image: '/pathuma-engineering-website/assets/SITE VISIT.jpg',
   },
   {
-    id: '07',
+    id: 'free-2',
     code: 'FREE QUOTATIONS ',
     badgeLeft: 'NOW!',
     badgeRight: 'FREE',
     image: '/pathuma-engineering-website/assets/QUOTATIONS.jpg',
   },
   {
-    id: '08',
+    id: '06',
     code: 'LOGO & SIGNAGE CUTTING',
     category: 'iron roofing',
     displayCategory: 'metal signs, name boards, logo designs, 3D letter',
@@ -184,7 +184,7 @@ const COLLECTION_ITEMS = [
     description: 'Industrial grade iron roofing truss designed for factories, warehouses, and large vehicle garages.'
   },
   {
-    id: '09',
+    id: '07',
     code: 'OTHER DESIGNS & FABRICATIONS',
     category: 'collapsible gates',
     displayCategory: 'furniture, trolleys, racks, Antique Ironwork',
@@ -267,8 +267,8 @@ export default function App() {
 
   // Handler for clicking collection items
   const handleItemClick = (item) => {
-    // Free items (ids 06 and 07) are non-clickable
-    if (item.id === '06' || item.id === '07') {
+    // Free items (ids free-1 and free-2) are non-clickable
+    if (item.id === 'free-1' || item.id === 'free-2') {
       return;
     }
     setSelectedProduct(item);
@@ -428,7 +428,7 @@ export default function App() {
             }
 
             return (
-              <div key={item.id} className="collection-card" onClick={() => handleItemClick(item)} style={{ cursor: (item.id === '06' || item.id === '07') ? 'default' : 'pointer' }}>
+              <div key={item.id} className="collection-card" onClick={() => handleItemClick(item)} style={{ cursor: (item.id === 'free-1' || item.id === 'free-2') ? 'default' : 'pointer' }}>
                 <div className="card-top-row">
                   <span className="card-badge-left font-mono">{item.badgeLeft}</span>
                   {item.badgeRight && <span className="card-badge-right font-mono">{item.badgeRight}</span>}
@@ -442,7 +442,7 @@ export default function App() {
                 <div className="card-bottom-info">
                   <span className="card-see-now font-mono">
                     {/* Hide "See Now" for free items */}
-                    {(item.id !== '06' && item.id !== '07') && (
+                    {(item.id !== 'free-1' && item.id !== 'free-2') && (
                       <>See Now <ArrowUpRight size={10} /></>
                     )}
                   </span>
