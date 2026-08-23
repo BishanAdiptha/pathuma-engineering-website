@@ -32,35 +32,35 @@ const HERO_SLIDES = [
     id: '01',
     title: 'Architectural Grill Gates',
     subtitle: 'Custom Laser-Cut Perimeter & Security Gates',
-    image: '/pathuma-engineering-website/assets/slide1.png',
+    image: '/pathuma-engineering-website/assets/1st.jpg',
     desc: 'Engineered with high-density steel and precision laser craftsmanship for modern luxury villas and residences.'
   },
   {
     id: '02',
     title: 'Structural Iron Roofing',
     subtitle: 'Heavy Duty Steel Trusses & Canopies',
-    image: '/pathuma-engineering-website/assets/slide2.png',
+    image: '/pathuma-engineering-website/assets/2nd.jpg',
     desc: 'Weatherproof industrial and residential iron roofing systems constructed to withstand extreme weather conditions.'
   },
   {
     id: '03',
     title: 'Collapsible Safety Gates',
     subtitle: 'Precision Folding Security Barriers',
-    image: '/pathuma-engineering-website/assets/slide3.png',
+    image: '/pathuma-engineering-website/assets/3rd.jpg',
     desc: 'Heavy-duty steel collapsible gates with smooth roller track mechanisms for commercial shops & home entrances.'
   },
   {
     id: '04',
     title: 'Aluminum Fabrication',
     subtitle: 'Modern Glass & Architectural Facades',
-    image: '/pathuma-engineering-website/assets/slide4.png',
+    image: '/pathuma-engineering-website/assets/4th.jpg',
     desc: 'Sleek black anodized aluminum windows, doors, partitioning, and architectural curtain walls.'
   },
   {
     id: '05',
     title: 'Custom Metal Crafts',
     subtitle: 'Luxury Railings & Ironwork Sculptures',
-    image: '/pathuma-engineering-website/assets/slide5.png',
+    image: '/pathuma-engineering-website/assets/5th.jpg',
     desc: 'Custom wrought iron staircases, decorative grilles, and hotel ironwork tailored to client blueprints.'
   }
 ];
@@ -257,7 +257,7 @@ export default function App() {
           <div className="hero-top-row">
             <div className="hero-cast-title">
               <div className="cast-main-row">
-                <h1 className="cast-main-text font-display">PATHUMA</h1>
+                <h1 className="cast-main-text font-display"><b>PATHUMA</b></h1>
                 <div className="cast-after-line"></div>
               </div>
               <p className="cast-subtitle-text font-mono">
@@ -296,7 +296,7 @@ export default function App() {
           {/* Middle Row: Horizontal Line + ENGINEERING WORK */}
           <div className="hero-middle-row">
             <div className="hero-title-line"></div>
-            <h2 className="cast-sub-text font-display">ENGINEERING WORK</h2>
+            <h2 className="cast-sub-text font-display"><b>ENGINEERING WORK</b></h2>
           </div>
 
           {/* Bottom Row: 2 Clean Paragraph Columns (No highlight boxes, company name used once) */}
