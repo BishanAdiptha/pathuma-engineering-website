@@ -28,41 +28,44 @@ const PhoneIcon = ({ size = 28 }) => (
   </svg>
 );
 
+// Base URL for public assets — works for both root and subdirectory deploys
+const BASE = import.meta.env.BASE_URL;
+
 // Hero slideshow 5 photos data
 const HERO_SLIDES = [
   {
     id: '1',
     title: 'Architectural Grill Gates',
     subtitle: 'Custom Laser-Cut Perimeter & Security Gates',
-    image: '/assets/1st.jpg',
+    image: `${BASE}assets/1st.jpg`,
     desc: 'Engineered with high-density steel and precision laser craftsmanship for modern luxury villas and residences.'
   },
   {
     id: '2',
     title: 'Structural Iron Roofing',
     subtitle: 'Heavy Duty Steel Trusses & Canopies',
-    image: '/assets/2nd.jpg',
+    image: `${BASE}assets/2nd.jpg`,
     desc: 'Weatherproof industrial and residential iron roofing systems constructed to withstand extreme weather conditions.'
   },
   {
     id: '3',
     title: 'Collapsible Safety Gates',
     subtitle: 'Precision Folding Security Barriers',
-    image: '/assets/3rd.jpg',
+    image: `${BASE}assets/3rd.jpg`,
     desc: 'Heavy-duty steel collapsible gates with smooth roller track mechanisms for commercial shops & home entrances.'
   },
   {
     id: '4',
     title: 'Aluminum Fabrication',
     subtitle: 'Modern Glass & Architectural Facades',
-    image: '/assets/4th.jpg',
+    image: `${BASE}assets/4th.jpg`,
     desc: 'Sleek black anodized aluminum windows, doors, partitioning, and architectural curtain walls.'
   },
   {
     id: '5',
     title: 'Custom Metal Crafts',
     subtitle: 'Luxury Railings & Ironwork Sculptures',
-    image: '/assets/5th.jpg',
+    image: `${BASE}assets/5th.jpg`,
     desc: 'Custom wrought iron staircases, decorative grilles, and hotel ironwork tailored to client blueprints.'
   }
 ];
@@ -75,7 +78,7 @@ const COLLECTION_ITEMS = [
     category: 'grill gates',
     displayCategory: 'sliding, swing, driveway',
     badgeLeft: '01.',
-    image: '/assets/GATE.jpg',
+    image: `${BASE}assets/GATE.jpg`,
     specs: {
       Material: 'Wrought Iron & Steel',
       Finish: 'Matte Powder Coating',
@@ -95,7 +98,7 @@ const COLLECTION_ITEMS = [
     category: 'iron roofing',
     displayCategory: 'security & decorative',
     badgeLeft: '02.',
-    image: '/assets/WINDOW.jpg',
+    image: `${BASE}assets/WINDOW.jpg`,
     specs: {
       Material: 'Galvanized Structural Steel',
       Thickness: 'Gauge 14 - 16 Steel',
@@ -110,7 +113,7 @@ const COLLECTION_ITEMS = [
     category: 'grill gates',
     displayCategory: 'staircases, balconies, verandas',
     badgeLeft: '03.',
-    image: '/assets/HAND RAILLING.jpg',
+    image: `${BASE}assets/HAND RAILLING.jpg`,
     specs: {
       Material: 'Solid Square Bar Iron',
       'Hinge System': 'Heavy Duty Bearing Pivot',
@@ -125,7 +128,7 @@ const COLLECTION_ITEMS = [
     category: 'collapsible gates',
     displayCategory: 'amano sheets / steel roofing sheets',
     badgeLeft: '04.',
-    image: '/assets/ROOFING.jpg',
+    image: `${BASE}assets/ROOFING.jpg`,
     specs: {
       Material: 'Stainless & High Carbon Steel',
       Track: 'Embedded Floor & Overhead Rail',
@@ -140,7 +143,7 @@ const COLLECTION_ITEMS = [
     category: 'aluminum fabrication',
     displayCategory: 'steel + polycarbonate',
     badgeLeft: '05.',
-    image: '/assets/CAR PORCHES.jpg',
+    image: `${BASE}assets/CAR PORCHES.jpg`,
     specs: {
       Material: 'Anodized Aluminum Profile',
       Glass: '8mm Tempered Safety Glass',
@@ -159,14 +162,14 @@ const COLLECTION_ITEMS = [
     code: 'FREE SITE VISITS ',
     badgeLeft: 'NOW!',
     badgeRight: 'FREE',
-    image: '/assets/SITE VISIT.jpg',
+    image: `${BASE}assets/SITE VISIT.jpg`,
   },
   {
     id: 'free-2',
     code: 'FREE QUOTATIONS ',
     badgeLeft: 'NOW!',
     badgeRight: 'FREE',
-    image: '/assets/QUOTATIONS.jpg',
+    image: `${BASE}assets/QUOTATIONS.jpg`,
   },
   {
     id: '06',
@@ -174,7 +177,7 @@ const COLLECTION_ITEMS = [
     category: 'iron roofing',
     displayCategory: 'metal signs, name boards, logo designs, 3D letter',
     badgeLeft: '06.',
-    image: '/assets/LOGO & SIGNAGE.jpg',
+    image: `${BASE}assets/LOGO & SIGNAGE.jpg`,
     specs: {
       Material: 'Structural I-Beam & Box Bar',
       Span: 'Up to 30 Feet Unsupported',
@@ -189,7 +192,7 @@ const COLLECTION_ITEMS = [
     category: 'collapsible gates',
     displayCategory: 'furniture, trolleys, racks, Antique Ironwork',
     badgeLeft: '07.',
-    image: '/assets/OTHER DESIGNS.jpg',
+    image: `${BASE}assets/OTHER DESIGNS.jpg`,
     specs: {
       Material: 'Solid Steel Lattice',
       Locking: 'Internal Deadbolt System',
@@ -335,7 +338,7 @@ export default function App() {
 
         <div className="header-logo">
           <a href="#top" title="Pathuma Engineering Work Logo">
-            <img src="/assets/logo-pew.png" alt="Pathuma Engineering Work PEW Logo" />
+            <img src={`${BASE}assets/logo-pew.png`} alt="Pathuma Engineering Work PEW Logo" />
           </a>
         </div>
 
@@ -546,7 +549,7 @@ export default function App() {
           {/* Right: Founder Photo & Info */}
           <div className="founder-photo-block">
             <div className="founder-photo-wrap">
-              <img src="/assets/founder-photo.png" alt="Chamara Iresh Ranamuka — Founder of Pathuma Engineering Work" className="founder-photo-img" />
+              <img src={`${BASE}assets/founder-photo.png`} alt="Chamara Iresh Ranamuka — Founder of Pathuma Engineering Work" className="founder-photo-img" />
               <div className="founder-photo-overlay"></div>
             </div>
 
@@ -591,7 +594,7 @@ export default function App() {
 
           {/* Right: Logo */}
           <div className="footer-brand-col">
-            <img src="/assets/logo-pew.png" alt="Pathuma Engineering Work Logo" className="footer-logo-img" />
+            <img src={`${BASE}assets/logo-pew.png`} alt="Pathuma Engineering Work Logo" className="footer-logo-img" />
           </div>
 
         </div>
